@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+  <link rel="stylesheet" href="./helpers.css">
+  <link rel="stylesheet" href="./main.css">
+  <!-- <link rel="stylesheet" href="/Users/createjobs/Documents/digitalpipeline/experiments/bulma-site/debug.css"> -->
+  <script src="./sheetrock.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+  <!-- Sheetrock script begins here -->
+  <script>
+  var spreadsheet = "https://docs.google.com/spreadsheets/d/12p-PoD0i6JpkR2UlkMY2Q-Y_m7l_Dk0GjTJZ3nxlas4/edit#gid=0"
+
+  $(document).ready(function(){
+    var HRTemplate = Handlebars.compile($('#hr-template').html());
+    $('.row').sheetrock({
+      url: spreadsheet,
+      query: "select A, B, C, D, E, F, G, H, I, J, K, L, M, N",
+      rowTemplate: HRTemplate
+    });
+  });
+</script>
+<!-- Sheetrock script ends here -->
+<title>My Bulma Site</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <navbar>
+    <div class="hero-head">
+      <div class="columns is-mobile is-marginless heading has-text-weight-bold">
+        <div class="column center desktop">
+          <a href="./index.html">
+            <p class="navbar-item">Neurodiversity Works</p>
+          </a>
+        </div>
+        <div class="column center">
+          <figure class="image">
+            <a href="./index.html">
+              <img src="https://i.imgur.com/AVve11P.jpg" style=" width: 5rem; height: 3rem;">
+            </a>
+          </figure>
+        </div>
+        <div class="column center desktop">
+          <a href="./about.html">
+          <p class="navbar-item">About</p>
+        </a>
+        </div>
+      </div>
+    </div>
+  </navbar>
+  <!-- End Navbar -->
+  <section class="hero is-fullheight">
+  </section>
+  <div class="is-overlay has-text-centered single-spaced" style="top: 200px;">
+    <div class="box" style="width: 46%; margin: auto; padding: 2%; background-color: rgba(255, 255, 255, 0.7)"><br>
+      <h1 class="title is-1 has-text-weight-light" style="color: #6501D0; font-family:Raleway; text-shadow: 0px 0px 5px rgba(150, 150, 150, 0.8);">Neurodiversity Works</h1><br>
+      <h2 class="subtitle is-4" style="color: #6501D0; font-family:Quicksand; text-shadow: 0px 0px 5px rgba(150, 150, 150, 0.5);">Find employability support and opportunities that help you to fulfil your potential</h2><br>
+      <a class="button is-large is-primary is-inverted" style="color: #43C751; font-family:Quicksand; text-shadow: 0px 0px 5px rgba(150, 150, 150, 0.3);" href="./survey.html">Input your opportunity</a><br><br><br>
+    </div>
+    <section class="container" style="top: 60px; width: 73%;">
+      <columns style="display: flex; flex-wrap: wrap;">
+        <div class="row" style="display: flex; flex-wrap: wrap;">
+          <script id="hr-template" type="text/x-handlebars-template">
+            <div class="column">
+              <div class="card" style="padding: 3%;">
+                <div class="card-image" style="padding: 5%; width: 350px;">
+                  <img src="{{cells.OrganisationLogo}}" alt="{{cells.OrganisationName}} logo">
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="subtitle is-6"><b>Organisation: </b>{{cells.OrganisationName}}</p>
+                      <p class="subtitle is-6"><b>Opportunity: </b>{{cells.OpportunityName}}</p>
+                    <p class="subtitle is-6"><b>Address: </b>{{cells.OpportunityAddress}}</p>
+                    <p class="subtitle is-6"><b>Description: </b>{{cells.OpportunityDescription}}</p>
+                    <p class="subtitle is-6"><b>Start Date: </b>{{cells.OpportunityStartDate}}</p>
+                  <p class="subtitle is-6"><b>Who is it for? </b>{{cells.ClinicalGroup}}</p>
+                  <p class="subtitle is-6"><b>Paid Opportunity: </b>{{cells.Paid}}</p>
+                  <p class="subtitle is-6"><b>Extra Information: </b>{{cells.ExtraInformation}}</p>
+                  <p class="subtitle is-6"><b>Applications Link: </b><a href="{{cells.OpportunityLink}}">{{cells.OpportunityLink}}</a></p>
+                  <p class="subtitle is-6"><b>Deadline for Applications: </b>{{cells.OpportunityDeadline}}</p>
+                </div>
+              </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </script>
+          <table id="classes" class="table table-condensed tablet-striped"></table>
+        </div>
+      </columns>
+    </section>
+  </body>
+  </html>

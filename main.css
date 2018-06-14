@@ -1,0 +1,9 @@
+.hero {
+  background: green url(https://svgshare.com/i/6tX.svg) center / cover;
+}
+
+.col-md-1 {
+}
+
+@media (max-width: 1024px) { .hero { background: url(https://svgshare.com/i/6tX.svg) center / cover; }
+@media (max-width: 768px) { .hero { background: url(https://svgshare.com/i/6tX.svg) center / cover; }

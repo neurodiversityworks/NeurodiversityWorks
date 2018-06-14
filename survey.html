@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./survey.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+  <link rel="stylesheet" href="./helpers.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./survey.css">
+  <!-- <link rel="stylesheet" href="/Users/createjobs/Documents/digitalpipeline/experiments/bulma-site/debug.css"> -->
+  <title>My Survey</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <navbar>
+    <div class="hero-head">
+      <div class="columns is-mobile is-marginless heading has-text-weight-bold">
+        <div class="column center desktop">
+          <a href="./index.html">
+            <p class="navbar-item">Neurodiversity Works</p>
+          </a>
+        </div>
+        <div class="column center">
+          <figure class="image">
+            <a href="./index.html">
+              <img src="https://i.imgur.com/AVve11P.jpg" style=" width: 5rem; height: 3rem;">
+            </a>
+          </figure>
+        </div>
+        <div class="column center desktop">
+          <a href="./about.html">
+            <p class="navbar-item">About</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </navbar>
+  <!-- End Navbar -->
+  <section class="hero is-fullheight">
+  </section>
+  <div class="survey is-overlay has-text-centered" style="top: 200px;">
+    <div class="box" style="width: 46%; margin: auto; padding: 2%; background-color: rgba(255, 255, 255, 0.7)">
+      <h1 class="title is-2 has-text-weight-light" style="color: #6501D0; font-family:Raleway; text-shadow: 0px 0px 5px rgba(150, 150, 150, 0.8);">Input your opportunity</h1>
+      <span class="subtitle" style="color: #6501D0; font-family:Quicksand; text-shadow: 0px 0px 5px rgba(150, 150, 150, 0.8)">By submitting you agree for details to be held and displayed publicly</span>
+      <div class="columns">
+        <div class="column is-fullheight">
+          <div class="upform-header">
+            <div class="upform-main">
+              <div class="input-block">
+                <iframe name='hidden-iframe' style='display: none'></iframe>
+                <form id='google-form' method='post' target='hidden-iframe' action='https://script.google.com/macros/s/AKfycbze3N0fvKRExbH6zohSrDsLf8QcUXRpK94cUkHm6kPUw47NtNg/exec'>
+                  <div class="input-block">
+                    <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="text" name='OrganisationName' required/>
+                    <label class="label">Organisation Name</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="url" name='OrganisationLogo' required/>
+                    <label class="label">Organisation Logo</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="text" name='OpportunityName' required>
+                    <label class="label">Opportunity Name</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="text" name='OpportunityAddress' required>
+                    <label class="label">Opportunity Address</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="text" name='OpportunityDescription' required>
+                    <label class="label">Description of Opportunity</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="date" name='OpportunityStartDate' required>
+                    <label class="label">Start Date for Opportunity</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="date" name='OpportunityDeadline' required>
+                    <label class="label">Deadline for Applications</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <div class="control">
+                    <input class="input" type="url" name='OpportunityLink' required>
+                    <label class="label">Link for Applications</label>
+                    <i class="bar"></i>
+                  </div>
+                </div>
+              </div>
+                  <div class="input-block">
+                    <div class="input-control">
+                  <p class="control">
+                    <input class="input" type="email" value="hello@" name='Email' required>
+                    <label class="label">Email Contact (Neurodiversity Works may contact you if necessary)</label>
+                    <i class="bar"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <p class="control">
+                    <select>
+                      <option>Select dropdown</option>
+                      <option>With options</option>
+                    </select>
+                    <label class="label">Subject</label>
+                    <i class="bar"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="input-block">
+                <h6>Is this opportunity for a specific clinical group?</h6>
+                <div class="input-control">
+                  <p class="checkbox-control">
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Autism Spectrum Conditions"/>
+                      <i class="helper"></i>
+                      Autism Spectrum Conditions
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="ADHD"/>
+                      <i class="helper"></i>
+                      ADHD
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Dyslexia, Dyspraxia, Dyscalcula and Other Learning Difficulties"/>
+                      <i class="helper"></i>
+                      Dyslexia, Dyspraxia, Dyscalcula and Other Learning Difficulties
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Learning Disability"/>
+                      <i class="helper"></i>
+                      Learning Disability
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Schizophrenia, Bipolar or other Psychotic Spectrum Conditions"/>
+                      <i class="helper"></i>
+                      Schizophrenia, Bipolar or other Psychotic Spectrum Conditions
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Personality Disorder and Behavioural Conditions"/>
+                      <i class="helper"></i>
+                      Personality Disorder and Behavioural Conditions
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Epilepsy"/>
+                      <i class="helper"></i>
+                      Epilepsy
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Tourette Syndrome"/>
+                      <i class="helper"></i>
+                      Tourette Syndrome
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Speech Disorder"/>
+                      <i class="helper"></i>
+                      Speech Disorder
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Anxiety, Obsessive Compulsive Disorder"/>
+                      <i class="helper"></i>
+                      Anxiety, Obsessive Compulsive Disorder
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Other Neurological or Neurodevelopmental"/>
+                      <i class="helper"></i>
+                      Other Neurological or Neurodevelopmental
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="Disabled People"/>
+                      <i class="helper"></i>
+                      Disabled People
+                    </label>
+                    <label>
+                      <input type="checkbox" name="ClinicalGroup" value="All or No Specific Diagnosis"/>
+                      <i class="helper"></i>
+                      All or No Specific Diagnosis
+                    </label>
+                  </div>
+                </div>
+                  </p>
+                  <h6>Is the opportunity paid?</h6>
+                  <div class="input-block">
+                    <div class="input-control">
+                  <p class="radio-control">
+                    <label>
+                      <input type="radio" name="Paid" value="Yes">
+                      <i class="helper"></i>
+                      Yes
+                    </label>
+                    <label>
+                      <input type="radio" name="Paid" value="No">
+                      <i class="helper"></i>
+                      No
+                    </label>
+                  </p>
+                </div>
+              </div>
+              <div class="input-block">
+                <div class="input-control">
+                  <p class="control">
+                    <textarea class="textarea" name='ExtraInformation' required></textarea>
+                    <label class="label">Extra Information</label>
+                    <i class="bar"></i>
+                  </p>
+                </div>
+              </div>
+                  <div class="upform-footer">
+                  <p class="control">
+                    <button class="button" style="background-color:#6501D0; color:white;">
+                      <input type='submit' value='Submit'>Submit
+                    </button>
+                      <button class="button" style="background-color:#6501D0; color:white;">Cancel</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
