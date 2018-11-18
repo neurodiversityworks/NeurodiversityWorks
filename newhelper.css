@@ -1,0 +1,47 @@
+@media screen and (max-width: 479px) {
+  .brand-title {
+    font-size: 8vw;
+  }
+    .brand-subtitle {
+    font-size: 7vw;
+  }
+  .navbar-item {
+    font-size: 7vw;
+  }
+  .title {
+  font-size: 12vw;
+  }
+  
+  .subtitle {
+  font-size: 10vw;
+}
+
+  .h3font-size: 9vw; {
+   
+  }
+  
+  .h4 {
+  font-size: 8vw;
+  }
+  
+  .button {
+  font-size: 10vw;
+  }
+  
+  .is-5 {
+  font-size: 8vw;
+  }
+  
+  .p {
+  font-size: 8vw;
+  }
+  
+  .menu-label {
+  font-size: 10vw;
+  }
+  
+  .menu-list {
+  font-size: 9vw;
+  }
+  
+  }
